@@ -2,11 +2,11 @@
 
 # Record Collection
 
-This application allows a user to keep track of their record collection to a digital format. This will allow them to create, add and delete their collection and allow them to add comments for each entry.
+This application allows a user to keep track of their record collection in a digital format. This will allow them to create, add and delete their collection and allow them to add comments for each entry.
 
 ## Important Links
 
-- [Other Repo](www.link.com)
+- [Other Repo](https://github.com/loudam88/record-collection)
 - [Deployed API](www.link.com)
 - [Deployed Client](www.link.com)
 
@@ -27,8 +27,8 @@ After all these are completed, I then set up my file structure along with any de
 
 ### Technologies Used
 
-- Html
-- scss
+- html
+- css
 - Sass
 - Ajax
 - JSON
@@ -46,8 +46,6 @@ After all these are completed, I then set up my file structure along with any de
 <a href="https://imgur.com/frMoDp6"><img src="https://i.imgur.com/frMoDp6.png" title="source: imgur.com" /></a>
 ---
 
-#### ERD:
-<a href="https://imgur.com/y6hB5IF"><img src="https://i.imgur.com/y6hB5IF.png" title="source: imgur.com" /></a>
 
 #### Requirements:
 <a href="https://imgur.com/07VMGlJ"><img src="https://i.imgur.com/07VMGlJ.png" title="source: imgur.com" /></a>
