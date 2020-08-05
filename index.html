@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Record Collection</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,52 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+      <h1>Record Collection</h1>
+    </header>
+      <div id="not-certifed">
+        <h2 id="login">Login</h2>
+          <form id="sign-up">
+            <p id="message"></p>
+              <input name="credentials[email]" placeholder="email" type="text">
+              <input name="credentials[password]" placeholder="password" type="password">
+              <input name="credentials[password_confirmation]" placeholder="confirm password" type="password">
+                <button type="submit">Sign Up!</button>
+          </form>
+          <br>
+
+      <!-- dissapear after sign in -->
+          <form id="sign-in">
+            <input name="credentials[email]" placeholder="email" type="email">
+            <input name="credentials[password]" placeholder="password" type="password">
+              <button type="submit">Sign In</button>
+          </form>
+          <br>
+      </div>
+
+      <!-- dissapear after sign in -->
+      <div id="certified">
+        <p id="change-pw"></p>
+        <form id="change-password">
+          <input name="passwords[old]" placeholder="old password" type="password">
+          <input name="passwords[new]" placeholder="new password" type="password">
+            <button type="submit">Change Password</button>
+        </form>
+
+      <!-- appear only after sign in -->
+        <form id="sign-out">
+          <br>
+          <button type="submit">Sign Out</button>
+        </form>
+        <br>
+      </div>
+      <from>
+        <h2 id="albums-list">Albums:</h2>
+        <input name="credentials[title]" placeholder="Title" type="text">
+        <input name="credentials[genre]" placeholder="Genre" type="text">
+        <input name="credentials[style]" placeholder="Style" type="text">
+        <input name="credentials[release]" placeholder="First Release" type="text">
+          <button type="submit">Add Album</button>
+      </from>
     </body>
 </html>
