@@ -1,0 +1,37 @@
+
+{{#each albums as |album|}}
+{{log album}}
+<section data-id="{{album.id}}">
+  <h6>Title:</h6>
+  <h3>
+    {{limit album.title 15}}
+  </h2>
+  <h6>Genre:</h6>
+  <p>
+    {{#if album.genre}}
+      {{album.genre}}
+    {{else}}
+      No Genre provided.
+    {{/if}}
+  </p>
+  <h6>Style:</h6>
+  <p>
+    {{#if album.style}}
+      {{album.style}}
+    {{else}}
+      No Style provided.
+    {{/if}}
+  </p>
+  <h6>First Release:</h6>
+  <p>
+    {{#if album.firstRelease}}
+      {{album.firstRelease}}
+    {{else}}
+      No First Release provided.
+    {{/if}}
+  </p>
+  <button type="submit" class="btn btn-danger delete-book">Remove</button>
+  <!-- {{> partial}} -->
+</section>
+
+{{/each}}
