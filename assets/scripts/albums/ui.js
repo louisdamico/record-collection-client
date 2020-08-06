@@ -11,5 +11,4 @@ const getLibrarySuccess = (data) => {
 
 module.exports = {
   getLibrarySuccess
-
 }

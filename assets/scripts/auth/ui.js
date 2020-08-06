@@ -12,6 +12,8 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
+  store.user = response
+  console.log(store.user)
   $('form').trigger('reset')
   $('#message').text('Loged In').show()
   // $('#sign-up').delay(750).slideUp(750)
