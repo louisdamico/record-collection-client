@@ -12,7 +12,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
-  store.user = response
+  store.user = response.user
   console.log(store.user)
   $('form').trigger('reset')
   $('#message').text('Loged In').show()
@@ -36,9 +36,10 @@ const changePasswordFailure = function () {
   // $('#change-pw').text('Loged In').show()
   $('#change-pw').text('oops...Try Again').show()
 }
-const signOutSuccess = function () {
+const signOutSuccess = function (response) {
+  store.user = response
+  $('#message').text('Signed Out Successfully').show()
   // $('#change-password').hide()
-  // $('#message').text('Signed Out Successfully')
   // $('#sign-up').slideDown(750)
   // $('#sign-in').delay(500).slideDown(750)
   // $('#login').delay(3000).show('#login')
