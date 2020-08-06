@@ -9,7 +9,6 @@ const onAddNewAlbum = function (response) {
   event.preventDefault()
   const data = event.target
   const formData = getFormFields(data)
-
   console.log(formData)
   api.addNewAlbum(formData)
     .then(ui.addNewAlbumSuccess)
