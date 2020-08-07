@@ -1,7 +1,7 @@
 
 {{#each albums as |album|}}
 {{log album}}
-<section data-id="{{album.id}}">
+<section data-id="{{album._id}}">
   <h5>Title:</h5>
   <h2>
     {{limit album.title 15}}
@@ -30,7 +30,20 @@
       No First Release provided.
     {{/if}}
   </p>
-  {{> partial}}
+  <button type="submit" class="btn btn-outline-danger delete-album" data-id="{{album._id}}">Delete Album</button>
+  <div id="change-album">
+    <p id="updateAlbum-message"></p>
+    <form>
+      <input name="album[title]" placeholder="Title" type="text">
+      <input name="album[genre]" placeholder="Genre" type="text">
+      <input name="album[style]" placeholder="Style" type="text">
+      <input name="album[firstRelease]" placeholder="First Release" type="month" min="1877-01" max="2021-01" value="2020-08">
+      <button type="submit" class="btn btn-outline-warning update-album">Up Date</button>
+      </form>
+    </div>
+  </p>
+
+  <!-- {{> partial}} -->
 </section>
 
 {{/each}}

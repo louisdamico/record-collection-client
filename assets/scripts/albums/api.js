@@ -21,7 +21,7 @@ const getLibrary = function () {
     },
     method: 'GET',
     data: {
-      user: store.user.id
+      user: store.id
     }
   })
 }
