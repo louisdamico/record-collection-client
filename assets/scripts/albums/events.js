@@ -36,7 +36,7 @@ const onUpdateAlbum = function (event) {
 const onDeleteAlbum = function (event) {
   event.preventDefault()
   const albumId = $(event.target).closest('section').data('id')
-  console.log('DELETE button clicked')
+  console.log('DELETE button clicked', albumId)
   api.deleteAlbum(albumId)
     .then(() => onGetLibrary(event))
     .catch(ui.deleteAlbumFailure)
