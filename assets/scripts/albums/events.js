@@ -5,12 +5,13 @@ const ui = require('./ui')
 // const api = require('../app')
 const store = require('../store')
 
-const onAddNewAlbum = function (response) {
+const onAddNewAlbum = function (event) {
   event.preventDefault()
   const data = event.target
   const formData = getFormFields(data)
   console.log(formData)
   api.addNewAlbum(formData)
+    .then(() => onGetLibrary(event))
     .then(ui.addNewAlbumSuccess)
     .catch(ui.addNewAlbumFailure)
 }
@@ -29,6 +30,7 @@ const onUpdateAlbum = function (event) {
   const albumId = $(event.target).closest('section').data('id')
   console.log(formData, albumId)
   api.updateAlbum(formData, albumId)
+    // .then(() => onGetLibrary(event))
     .then(ui.updateAlbumSuccess)
     .catch(ui.updateAlbumFailure)
 }
@@ -39,6 +41,7 @@ const onDeleteAlbum = function (event) {
   console.log('DELETE button clicked', albumId)
   api.deleteAlbum(albumId)
     .then(() => onGetLibrary(event))
+    .then(ui.deleteAlbumSuccess)
     .catch(ui.deleteAlbumFailure)
 }
 module.exports = {
