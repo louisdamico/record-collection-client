@@ -14,6 +14,6 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#add-album').on('submit', albumEvents.onAddNewAlbum)
   $('#getAlbumsButton').on('click', albumEvents.onGetLibrary)
-  $('.content').on('click', '.btn-outline-warning', albumEvents.onUpdateAlbum)
-  $('.content').on('click', '.btn-outline-danger', albumEvents.onDeleteAlbum)
+  $('#content').on('submit', '.partial-update-album', albumEvents.onUpdateAlbum)
+  $('#content').on('click', '.delete-album', albumEvents.onDeleteAlbum)
 })
