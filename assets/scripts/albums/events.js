@@ -22,23 +22,23 @@ const onGetLibrary = (event) => {
     .catch(ui.getLibraryfailure)
 }
 
-const onUpdateAlbum = function (response) {
+const onUpdateAlbum = function (event) {
   event.preventDefault()
   const data = event.target
   const formData = getFormFields(data)
-  const id = $(event.target).closest('section').data('id')
-  console.log(formData)
-  api.updateAlbum(formData)
+  const albumId = $(event.target).closest('section').data('id')
+  console.log(formData, albumId)
+  api.updateAlbum(formData, albumId)
     .then(ui.updateAlbumSuccess)
     .catch(ui.updateAlbumFailure)
 }
 
 const onDeleteAlbum = function (event) {
   event.preventDefault()
-  const id = $(event.target).closest('section').data('id')
+  const albumId = $(event.target).closest('section').data('id')
   console.log('DELETE button clicked')
-  api.deleteAlbum(id)
-    .then(ui.deleteAlbumSuccess)
+  api.deleteAlbum(albumId)
+    .then(() => onGetLibrary(event))
     .catch(ui.deleteAlbumFailure)
 }
 module.exports = {

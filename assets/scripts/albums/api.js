@@ -26,8 +26,7 @@ const getLibrary = function () {
   })
 }
 
-const updateAlbum = function (formData) {
-  const albumId = store.album.id
+const updateAlbum = function (formData, albumId) {
   console.log(albumId)
   return $.ajax({
     url: config.apiUrl + '/albums/' + albumId,
@@ -39,9 +38,9 @@ const updateAlbum = function (formData) {
   })
 }
 
-const deleteAlbum = function () {
+const deleteAlbum = (albumId) => {
   return $.ajax({
-    url: config.apiUrl + '/albums/:id',
+    url: config.apiUrl + '/albums/' + albumId,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
