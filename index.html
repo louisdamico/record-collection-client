@@ -52,18 +52,19 @@
         <br>
       </div>
       <div id="add-album">
+        <p id="addAlbum-message"></p>
         <form>
-          <input name="credentials[title]" placeholder="Title" type="text">
-          <input name="credentials[genre]" placeholder="Genre" type="text">
-          <input name="credentials[style]" placeholder="Style" type="text">
-          <input name="credentials[release]" placeholder="First Release" type="date">
-            <button type="submit">Add Album</button>
+          <input name="album[title]" placeholder="Title" type="text">
+          <input name="album[genre]" placeholder="Genre" type="text">
+          <input name="album[style]" placeholder="Style" type="text">
+          <input name="album[firstRelease]" placeholder="First Release" type="month" min="1877-01" max="2021-01"value="2020-08">
+            <button id="add-new-album" class="btn btn-success" type="submit">Add Album</button>
           </form>
         </div>
             <nav>
-            <div class="collection">Album Library:</div>
+            <div class="collection">Album Catalog:</div>
             <div class="nav-buttons">
-              <button id="getAlbumsButton" class="btn btn-info mr-2">Get Albums!</button>
+              <button id="getAlbumsButton" class="btn btn-info mr-2">Get Albums</button>
               <div id="content" class="content"></div>
             </nav>
     </body>

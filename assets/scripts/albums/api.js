@@ -15,11 +15,41 @@ const addNewAlbum = function (formData) {
 
 const getLibrary = function () {
   return $.ajax({
-    url: config.apiUrl + '/albums'
+    url: config.apiUrl + '/albums',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'GET',
+    data: {
+      user: store.user.id
+    }
   })
 }
 
+const updateAlbum = function (formData, albumId) {
+  console.log(albumId)
+  return $.ajax({
+    url: config.apiUrl + '/albums/' + albumId,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'PATCH',
+    data: formData
+  })
+}
+
+const deleteAlbum = (albumId) => {
+  return $.ajax({
+    url: config.apiUrl + '/albums/' + albumId,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'DELETE'
+  })
+}
 module.exports = {
   addNewAlbum,
-  getLibrary
+  getLibrary,
+  updateAlbum,
+  deleteAlbum
 }
