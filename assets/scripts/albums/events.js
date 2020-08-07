@@ -8,7 +8,6 @@ const onAddNewAlbum = function (event) {
   event.preventDefault()
   const data = event.target
   const formData = getFormFields(data)
-  console.log(formData)
   api.addNewAlbum(formData)
     .then(() => onGetLibrary(event))
     .then(ui.addNewAlbumSuccess)
@@ -27,9 +26,7 @@ const onUpdateAlbum = function (event) {
   const data = event.target
   const formData = getFormFields(data)
   const albumId = $(event.target).closest('section').data('id')
-  console.log(formData, albumId)
   api.updateAlbum(formData, albumId)
-    // .then(() => onGetLibrary(event))
     .then(ui.updateAlbumSuccess)
     .catch(ui.updateAlbumFailure)
 }
@@ -37,9 +34,7 @@ const onUpdateAlbum = function (event) {
 const onDeleteAlbum = function (event) {
   event.preventDefault()
   const albumId = $(event.target).closest('section').data('id')
-  console.log('DELETE button clicked', albumId)
   api.deleteAlbum(albumId)
-    // .then((response) => onGetLibrary(response))
     .then(ui.deleteAlbumSuccess)
     .catch(ui.deleteAlbumFailure)
 }

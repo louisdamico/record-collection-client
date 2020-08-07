@@ -2,41 +2,56 @@
 const store = require('../store')
 const events = require('./events')
 
+$('.add-album').hide()
+$('#sign-out').hide()
+$('#album-catolog').hide()
+$('.certified-pw').hide()
+
 const signUpSuccess = function () {
-  $('#message').text('All Signed up!').show()
+  $('#log-message').text('All Signed up!').show()
   $('form').trigger('reset')
-  $('#sign-up').delay(750).slideUp(750)
-}
-const signUpFailure = function () {
-  $('#message').text('Try A Different Email').show()
+  $('#sign-up').hide()
 }
 
+const signUpFailure = function () {
+  $('#log-message').text('Try A Different Email').show()
+}
 const signInSuccess = function (response) {
   store.user = response.user
-  console.log(store.user)
   $('form').trigger('reset')
-  $('#message').text('Loged In').show()
+  $('#log-message').text('Loged In').show()
+  $('#album-catolog').show()
+  $('.certified-pw').hide()
+  $('.add-album').show()
+  $('#sign-out').show()
+  $('#sign-in').hide()
+  $('#sign-up').hide()
+  $('#login').hide()
 }
 
 const signInFailure = function () {
-  $('#message').text('OOPS...Sign In').show()
+  $('#log-message').text('OOPS...Sign In').show()
 }
+
 const changePasswordSuccess = function () {
   $('form').trigger('reset')
-  $('#message').text('Password changed').show()
+  $('#log-message').text('Password changed').show()
 }
 
 const changePasswordFailure = function () {
   $('#change-pw').text('oops...Try Again').show()
 }
+
 const signOutSuccess = function (response) {
   store.user = response
-  $('#message').text('Signed Out Successfully').show()
+  $('#log-message').text('Signed Out Successfully').show()
   $('.content').empty()
+  $('#sign-in').show()
+  $('#sign-up').show()
 }
 
 const signOutFailure = function () {
-  $('#message').text('Signed Out')
+  $('#log-message').text('Signed Out')
 }
 
 module.exports = {
