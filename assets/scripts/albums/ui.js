@@ -9,11 +9,23 @@ $('#album-catolog').hide()
 
 const addNewAlbumSuccess = (data) => {
   $('form').trigger('reset')
+  $('#addAlbum-message').show()
   $('#addAlbum-message').text('Album Added To Your Catalog')
+  $('#addAlbum-message').delay(2500).slideUp(750)
 }
 const addNewAlbumFailure = (data) => {
   $('#addAlbum-message').show()
   $('#addAlbum-message').text('Oops...Title & Genre Required')
+}
+const updateAlbumSuccess = () => {
+  api.getLibrary()
+    .then(getLibrarySuccess)
+    .catch(function () {
+      console.log('hello')
+    })
+}
+const updateAlbumFailure = () => {
+  $('#updateAlbum-message').text('Oops...Update Again')
 }
 const getLibrarySuccess = (data) => {
   const showAlbumHtml = showAlbumTemplate({ albums: data.album })
@@ -22,15 +34,9 @@ const getLibrarySuccess = (data) => {
   // append must be stay on bottom
   $('.content').append(showAlbumHtml)
 }
-
-const updateAlbumSuccess = () => {
-  api.getLibrary()
-    .then(getLibrarySuccess)
-    .catch(function () {
-      console.log('hello')
-    })
+const getLibraryfailure = () => {
+  $('.catolog-message').text('Opps...Try Again')
 }
-
 const deleteAlbumSuccess = (event) => {
   api.getLibrary()
     .then(getLibrarySuccess)
@@ -38,11 +44,18 @@ const deleteAlbumSuccess = (event) => {
       console.log('hello')
     })
 }
+const deleteAlbumFailure = () => {
+  $('#deleteAlbum-message').text('Oops...Delete Again')
+  $('#deleteAlbum-message').delay(2500).slideUp(750)
+}
 
 module.exports = {
   addNewAlbumSuccess,
   addNewAlbumFailure,
   getLibrarySuccess,
+  getLibraryfailure,
   updateAlbumSuccess,
-  deleteAlbumSuccess
+  updateAlbumFailure,
+  deleteAlbumSuccess,
+  deleteAlbumFailure
 }
