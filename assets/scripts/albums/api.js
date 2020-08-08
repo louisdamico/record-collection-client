@@ -2,7 +2,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const addNewAlbum = (formData) => {
+const addNewAlbum = function (formData) {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -13,7 +13,7 @@ const addNewAlbum = (formData) => {
   })
 }
 
-const getLibrary = () => {
+const getLibrary = function () {
   return $.ajax({
     url: config.apiUrl + '/albums',
     headers: {
@@ -26,7 +26,8 @@ const getLibrary = () => {
   })
 }
 
-const updateAlbum = (formData, albumId) => {
+const updateAlbum = function (formData, albumId) {
+  console.log(formData, albumId)
   return $.ajax({
     url: config.apiUrl + '/albums/' + albumId,
     headers: {
