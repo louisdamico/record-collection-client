@@ -5,6 +5,9 @@ const api = require('./api')
 const showAlbumTemplate = require('../templates/album-listing.handlebars')
 
 const addNewAlbumSuccess = (data) => {
+
+  $('form').trigger('reset')
+
   $('#addAlbum-message').text('Album Added To Your Catalog')
 }
 const addNewAlbumFailure = () => {
@@ -15,18 +18,22 @@ const getLibrarySuccess = (data) => {
   $('.content').empty()
   $('.content').append(showAlbumHtml)
 }
+
 const getLibraryfailure = () => {
   $('#addAlbum-message').text('OOPS...Try Again')
 }
+
 const updateAlbumSuccess = () => {
   api.getLibrary()
     .then(getLibrarySuccess)
     .catch(function () {
       console.log('hello')
     })
+
 }
 const updateAlbumFailure = () => {
   $('#updateAlbum-message').text('OOPS...Try Again')
+
 }
 const deleteAlbumSuccess = (event) => {
   api.getLibrary()
@@ -35,9 +42,10 @@ const deleteAlbumSuccess = (event) => {
       console.log('hello')
     })
 }
+
 const deleteAlbumFailure = () => {
   $('#updateAlbum-message').text('OOPS...Try Again')
-}
+
 
 module.exports = {
   addNewAlbumSuccess,
