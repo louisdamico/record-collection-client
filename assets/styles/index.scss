@@ -1,1 +1,43 @@
 @import '~bootstrap/scss/bootstrap';
+// @import url('https://i.imgur.com/dp3kvSC.jpg');
+@import url('https://subtlepatterns.com/patterns/dark_wood.png');
+@import url('https://i.imgur.com/uBSkrpm.jpg');
+
+$input: #d3d3d3;
+$header: #B22222;
+$background: #000000;
+$background2: #191919;
+
+*:focus {
+  outline: none;
+}
+
+
+
+button:focus {
+  outline: none;
+  color: $input;
+}
+
+body {
+  // background-image: url('https://i.imgur.com/dp3kvSC.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-image: url('https://subtlepatterns.com/patterns/dark_wood.png');
+  // width: 100%;
+  // margin: 0;
+  color: $input;
+  text-align: center;
+  background-color: $background2;
+  background-repeat: no-repeat;
+  // background-image: radial-gradient($background, $background2);
+  // background-size: cover;
+}
+
+.header {
+  background-size: cover;
+  background-image: url('https://i.imgur.com/uBSkrpm.jpg');
+  border-radius: 15px;
+  margin: 3%;
+  padding: 10%;
+}

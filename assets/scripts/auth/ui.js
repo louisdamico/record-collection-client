@@ -27,7 +27,7 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function () {
-  $('#message').text('OOPS...Sign In').show()
+  $('#message').text('Oops...Sign In').show()
 }
 const changePasswordSuccess = function () {
   $('form').trigger('reset')
