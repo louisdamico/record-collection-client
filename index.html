@@ -17,14 +17,14 @@
     </header>
       <div id="not-certifed">
         <h2 id="login">Login</h2>
-          <form id="sign-up">
-            <p id="message"></p>
+          <p id="log-message"></p>
+            <form id="sign-up">
               <input name="credentials[email]" placeholder="email" type="text">
               <input name="credentials[password]" placeholder="password" type="password">
               <input name="credentials[password_confirmation]" placeholder="confirm password" type="password">
                 <button type="submit">Sign Up!</button>
           </form>
-          <br>
+        <br>
 
       <!-- dissapear after sign in -->
           <form id="sign-in">
@@ -32,18 +32,18 @@
             <input name="credentials[password]" placeholder="password" type="password">
               <button type="submit">Sign In</button>
           </form>
-          <br>
+        <br>
       </div>
 
       <!-- dissapear after sign in -->
-      <div id="certified">
+      <div class="certified-pw">
         <p id="change-pw"></p>
-        <form id="change-password">
-          <input name="passwords[old]" placeholder="old password" type="password">
-          <input name="passwords[new]" placeholder="new password" type="password">
-            <button type="submit">Change Password</button>
-        </form>
-
+          <form id="change-password">
+            <input name="passwords[old]" placeholder="old password" type="password">
+            <input name="passwords[new]" placeholder="new password" type="password">
+              <button type="submit">Change Password</button>
+          </form>
+      </div>
       <!-- appear only after sign in -->
         <form id="sign-out">
           <br>
@@ -51,7 +51,7 @@
         </form>
         <br>
       </div>
-      <div id="add-album">
+      <div class="add-album">
         <p id="addAlbum-message"></p>
         <form>
           <input name="album[title]" placeholder="Title" type="text">
@@ -62,10 +62,22 @@
           </form>
         </div>
             <nav>
-            <div class="collection">Album Catalog:</div>
-            <div class="nav-buttons">
+            <div id="album-catolog">Album Catalog:
+            <!-- <div class="nav-buttons"> -->
               <button id="getAlbumsButton" class="btn btn-info mr-2">Get Albums</button>
+              </div>
               <div id="content" class="content"></div>
             </nav>
+            <!-- <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-xs-4 bg-primary">
+                  <div class="row">
+                    <div class="col-lg-6 col-xs-4 bg-success">
+                      <p>Test</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
     </body>
 </html>
