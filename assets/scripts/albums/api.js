@@ -27,8 +27,11 @@ const getLibrary = () => {
 }
 
 const updateAlbum = function (formData, albumId) {
+<<<<<<< HEAD
   console.log(formData, albumId)
 
+=======
+>>>>>>> MVP
   return $.ajax({
     url: config.apiUrl + '/albums/' + albumId,
     headers: {
