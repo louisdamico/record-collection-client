@@ -5,7 +5,7 @@ const api = require('./api')
 const showAlbumTemplate = require('../templates/album-listing.handlebars')
 
 const addNewAlbumSuccess = (data) => {
-  console.log(data)
+  $('form').trigger('reset')
   $('#addAlbum-message').text('Album Added To Your Catalog')
 }
 
