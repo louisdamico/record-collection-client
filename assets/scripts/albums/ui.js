@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store')
 const events = require('./events')
+const api = require('./api')
 const showAlbumTemplate = require('../templates/album-listing.handlebars')
 
 const addNewAlbumSuccess = (data) => {
@@ -15,17 +16,22 @@ const getLibrarySuccess = (data) => {
   $('.content').append(showAlbumHtml)
 }
 
-const updateAlbumSuccess = (data) => {
-  console.log(data)
-  const showAlbumHtml = showAlbumTemplate({ albums: data.album.id })
-  $('#updateAlbum-message').text('Album Updated')
-  $('.content').text(showAlbumHtml)
+const updateAlbumSuccess = () => {
+  api.getLibrary()
+    .then(getLibrarySuccess)
+    .catch(function () {
+      console.log('hello')
+    })
 }
 
 const deleteAlbumSuccess = (event) => {
-  $('.content').empty()
-  console.log('Album Deleted')
+  api.getLibrary()
+    .then(getLibrarySuccess)
+    .catch(function () {
+      console.log('hello')
+    })
 }
+
 module.exports = {
   addNewAlbumSuccess,
   getLibrarySuccess,

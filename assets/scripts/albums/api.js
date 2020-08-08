@@ -27,7 +27,7 @@ const getLibrary = function () {
 }
 
 const updateAlbum = function (formData, albumId) {
-  console.log(albumId)
+  console.log(formData, albumId)
   return $.ajax({
     url: config.apiUrl + '/albums/' + albumId,
     headers: {

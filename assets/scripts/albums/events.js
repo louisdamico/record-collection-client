@@ -2,7 +2,6 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
-// const api = require('../app')
 const store = require('../store')
 
 const onAddNewAlbum = function (event) {
@@ -40,7 +39,7 @@ const onDeleteAlbum = function (event) {
   const albumId = $(event.target).closest('section').data('id')
   console.log('DELETE button clicked', albumId)
   api.deleteAlbum(albumId)
-    .then(() => onGetLibrary(event))
+    // .then((response) => onGetLibrary(response))
     .then(ui.deleteAlbumSuccess)
     .catch(ui.deleteAlbumFailure)
 }
