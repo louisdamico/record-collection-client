@@ -1,36 +1,62 @@
 
 {{#each albums as |album|}}
-{{log album}}
-<section data-id="{{album._id}}">
-  <h5>Title:</h5>
-  <h2>
-    {{limit album.title 15}}
-  </h2>
-  <h5>Genre:</h5>
-  <p>
-    {{#if album.genre}}
-      {{album.genre}}
-    {{else}}
-      No Genre provided.
-    {{/if}}
-  </p>
-  <h5>Style:</h5>
-  <p>
-    {{#if album.style}}
-      {{album.style}}
-    {{else}}
-      No Style provided.
-    {{/if}}
-  </p>
-  <h5>First Release:</h5>
-  <p>
-    {{#if album.firstRelease}}
-      {{album.firstRelease}}
-    {{else}}
-      No First Release provided.
-    {{/if}}
-  </p>
-  {{> partial}}
-</section>
-
+  {{log album}}
+    <br>
+      <section data-id="{{album._id}}">
+        <!-- Card Wider -->
+        <div class="card card-cascade wider">
+          <!-- Card image -->
+          <div class="view view-cascade overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center pb-0">
+            <!-- Title -->
+            <h4 class="card-title"><strong>Title</strong></h4>
+            <h2>
+              {{limit album.title 15}}
+            </h2>
+            <!-- Genre -->
+            <h5 class="blue-text pb-2"><strong>Genre</strong></h5>
+            <p>
+              {{#if album.genre}}
+              {{album.genre}}
+              {{else}}
+              No Genre provided
+              {{/if}}
+            </p>
+            <!-- Style -->
+            <h5 class="blue-text pb-2"><strong>Style</strong></h5>
+            <p>
+              {{#if album.style}}
+              {{album.style}}
+              {{else}}
+              No Style provided
+              {{/if}}
+            </p>
+            <!-- firstRelease -->
+            <h5 class="blue-text pb-2"><strong>First Release</strong></h5>
+            <p>
+              {{#if album.firstRelease}}
+              {{album.firstRelease}}
+              {{else}}
+              No First Release provided
+              {{/if}}
+            </p>
+            {{> partial}}
+          </div>
+        </div>
+      </section>
+    <br>
 {{/each}}
+
+<!-- Notes -->
+<!-- <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
+laudantium, totam rem aperiam. </p> -->
+<!-- Card footer -->
+<!-- <div class="card-footer text-muted text-center mt-4">
+  2 days ago
+</div> -->
