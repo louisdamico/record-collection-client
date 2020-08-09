@@ -1,7 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
-// @import url('https://i.imgur.com/dp3kvSC.jpg');
-@import url('https://subtlepatterns.com/patterns/dark_wood.png');
 @import url('https://i.imgur.com/uBSkrpm.jpg');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 $input: #d3d3d3;
 $header: #B22222;
@@ -12,26 +11,16 @@ $background2: #191919;
   outline: none;
 }
 
-
-
 button:focus {
   outline: none;
-  color: $input;
 }
 
 body {
-  // background-image: url('https://i.imgur.com/dp3kvSC.jpg');
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-image: url('https://subtlepatterns.com/patterns/dark_wood.png');
-  // width: 100%;
-  // margin: 0;
+  margin: 3%;
   color: $input;
   text-align: center;
   background-color: $background2;
   background-repeat: no-repeat;
-  // background-image: radial-gradient($background, $background2);
-  // background-size: cover;
 }
 
 .header {
@@ -40,4 +29,62 @@ body {
   border-radius: 20px;
   margin: 3%;
   padding: 10%;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+}
+
+form {
+ margin: 3%;
+ color: $input;
+}
+
+input[type=email]{
+  text-align: center;
+  border-radius: 7px;
+  background-color: $input;
+}
+
+input[type=password]{
+  text-align: center;
+  border-radius: 7px;
+  background-color: $input;
+}
+
+input[type=text]{
+  text-align: center;
+  border-radius: 7px;
+  background-color: $input;
+}
+
+input[type=month]{
+  text-align: center;
+  border-radius: 7px;
+  background-color: $input;
+}
+
+.add-new-album {
+  margin: 2%;
+}
+.update-album {
+  margin-top: 2%;
+  margin-bottom: 4%
+}
+.delete-button {
+  padding: 0px;
+}
+/* For iphone: */
+@media screen and (max-width : 450px){
+  .header {
+    margin: 1%;
+  }
+  .login-signup {
+    margin: 1%;
+  }
+  form {
+    margin: auto;
+  }
+  input {
+    margin: auto;
+  }
+
 }
