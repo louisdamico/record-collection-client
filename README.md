@@ -34,11 +34,12 @@ After all these are completed, I then set up my file structure along with any de
 - JSON
 - JavaScipt
 - Bootstrap
+- Handlebars
 
 ### Unsolved Problems
 
-- Still need to ....
-- Would like to eventually add a google scan to the app for easy web search of that particular album and have that input your data for you.
+- Still need to clean up the styling.
+- Would like to add a rating sytem along with personal notes per album. Eventually would like to add photo of the album cover and add google scan to the app for easy web search of that particular album.
 
 ## Images
 
