@@ -16,6 +16,8 @@ const addNewAlbumSuccess = (data) => {
 const addNewAlbumFailure = (data) => {
   $('#addAlbum-message').show()
   $('#addAlbum-message').text('Oops...Title & Genre Required')
+  $('#addAlbum-message').delay(2500).slideUp(750)
+  $('form').trigger('reset')
 }
 const updateAlbumSuccess = () => {
   api.getLibrary()
@@ -38,6 +40,7 @@ const getLibraryfailure = () => {
   $('.catolog-message').text('Opps...Try Again')
 }
 const deleteAlbumSuccess = (event) => {
+  $('#deleteAlbum-message').text('Album DELETED')
   api.getLibrary()
     .then(getLibrarySuccess)
     .catch(function () {
