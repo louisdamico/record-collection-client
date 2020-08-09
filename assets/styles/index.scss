@@ -34,6 +34,9 @@ body {
   text-align: center;
 }
 
+#message {
+  font-size: 30px;
+}
 form {
  margin: 3%;
  color: $input;
@@ -70,14 +73,14 @@ input[type=month]{
   margin-top: 4%;
   margin-bottom: 4%
 }
-.delete-button {
+.delete-album {
+  float: left;
   padding: 0px;
 }
 
-
 .card {
   color: $background;
-  margin-top: 5%;
+  margin-top: 8%;
 }
 
 .overlay {

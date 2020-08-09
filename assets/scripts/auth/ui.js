@@ -32,13 +32,13 @@ const signInFailure = function () {
 
 const changePasswordSuccess = function () {
   $('#change-pw').text('Password changed').show()
-  $('#change-pw').delay(2500).fadeOut(750)
+  $('#change-pw').delay(2500).slideUp(750)
   $('form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
-  $('#change-pw').text('Oops...Try Password Again').show()
-  $('#change-pw').delay(2500).fadeOut(750)
+  $('#change-pw').text('Oops...Try Changing Again').show()
+  $('#change-pw').delay(2500).slideUp(750)
   $('form').trigger('reset')
 }
 
