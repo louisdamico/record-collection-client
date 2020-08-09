@@ -16,6 +16,13 @@ The first stage of the planning process was to create a wireframe and an Entity 
 Next I set up resources and materials I would need in order to complete the project. This consisted of organizing all the materials and setting up documents for quick and easy access, in a flow that would be the best use of my time.
 After all these are completed, I then set up my file structure along with any dependencies I would need to get started.  Once they were all ready to go I then created a new repository in which I pushed up the main branch of my application.  Now I was ready to start developing!
 
+## Images
+---
+#### Wireframe:
+<a href="https://imgur.com/frMoDp6"><img src="https://i.imgur.com/frMoDp6.png" title="source: imgur.com" /></a>
+---
+#### Record Collection:
+<a href="https://imgur.com/rOXXyBW"><img src="https://i.imgur.com/rOXXyBW.png" title="source: imgur.com" /></a>
 
 ### User Stories
 
@@ -40,13 +47,3 @@ After all these are completed, I then set up my file structure along with any de
 
 - Still need to clean up the styling.
 - Would like to add a rating sytem along with personal notes per album. Eventually would like to add photo of the album cover and add google scan to the app for easy web search of that particular album.
-
-## Images
-
-#### Wireframe:
-<a href="https://imgur.com/frMoDp6"><img src="https://i.imgur.com/frMoDp6.png" title="source: imgur.com" /></a>
----
-
-
-#### Requirements:
-<a href="https://imgur.com/07VMGlJ"><img src="https://i.imgur.com/07VMGlJ.png" title="source: imgur.com" /></a>
