@@ -72,6 +72,16 @@ input[type=month]{
 .delete-button {
   padding: 0px;
 }
+
+.card {
+  color: $background;
+}
+
+.overlay {
+margin-top: -3%;
+margin-left: -3%;
+margin-right: -3%;
+}
 // /* For iphone: */
 // @media screen and (max-width : 450px){
 //   .header {

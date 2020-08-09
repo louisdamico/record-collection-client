@@ -4,23 +4,23 @@
     <br>
       <section data-id="{{album._id}}">
         <!-- Card Wider -->
-        <div class="card card-cascade narrower">
+        <div class="card">
           <!-- Card image -->
-          <div class="view view-cascade overlay">
+          <div class="view overlay">
             <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
             <a href="#!">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
           <!-- Card content -->
-          <div class="card-body card-body-cascade text-center pb-0">
+          <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title"><strong>Title</strong></h4>
+            <h4 class="card-title"><strong>Title:</strong></h4>
             <h2>
               {{limit album.title 15}}
             </h2>
             <!-- Genre -->
-            <h5 class="blue-text pb-2"><strong>Genre</strong></h5>
+            <h5 class="blue-text pb-2"><strong>Genre:</strong></h5>
             <p>
               {{#if album.genre}}
               {{album.genre}}
@@ -29,7 +29,7 @@
               {{/if}}
             </p>
             <!-- Style -->
-            <h5 class="blue-text pb-2"><strong>Style</strong></h5>
+            <h5 class="blue-text pb-2"><strong>Style:</strong></h5>
             <p>
               {{#if album.style}}
               {{album.style}}
@@ -38,7 +38,7 @@
               {{/if}}
             </p>
             <!-- firstRelease -->
-            <h5 class="blue-text pb-2"><strong>First Release</strong></h5>
+            <h5 class="blue-text pb-2"><strong>First Release:</strong></h5>
             <p>
               {{#if album.firstRelease}}
               {{album.firstRelease}}
