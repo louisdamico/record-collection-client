@@ -33,6 +33,9 @@ body {
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+}
 form {
  margin: 3%;
  color: $input;
@@ -81,19 +84,18 @@ input[type=month]{
 margin-top: -3%;
 margin-left: -3%;
 margin-right: -3%;
+margin-bottom: 1%;
+box-shadow: 10px 10px 20px $background2;
 }
-// /* For iphone: */
-// @media screen and (max-width : 450px){
-//   .header {
-//     margin: 1%;
-//   }
-//   .login-signup {
-//     margin: 1%;
-//   }
-//   form {
-//     margin: auto;
-//   }
-//   input {
-//     margin: auto;
-//   }
-// }
+
+/* For iphone: */
+@media screen and (max-width : 450px){
+  body {
+    margin: auto;
+  }
+  .header {
+    margin: auto;
+  }
+  .login-signup {
+    margin: auto;
+  }
