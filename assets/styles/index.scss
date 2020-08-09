@@ -72,19 +72,18 @@ input[type=month]{
 .delete-button {
   padding: 0px;
 }
-/* For iphone: */
-@media screen and (max-width : 450px){
-  .header {
-    margin: 1%;
-  }
-  .login-signup {
-    margin: 1%;
-  }
-  form {
-    margin: auto;
-  }
-  input {
-    margin: auto;
-  }
-
-}
+// /* For iphone: */
+// @media screen and (max-width : 450px){
+//   .header {
+//     margin: 1%;
+//   }
+//   .login-signup {
+//     margin: 1%;
+//   }
+//   form {
+//     margin: auto;
+//   }
+//   input {
+//     margin: auto;
+//   }
+// }
