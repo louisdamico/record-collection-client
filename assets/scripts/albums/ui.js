@@ -14,6 +14,7 @@ const addNewAlbumSuccess = (data) => {
   $('#addAlbum-message').delay(2500).slideUp(750)
 }
 const addNewAlbumFailure = (data) => {
+  $('form').trigger('reset')
   $('#addAlbum-message').show()
   $('#addAlbum-message').text('Oops...Title & Genre Required')
 }

@@ -29,14 +29,19 @@ const signInSuccess = function (response) {
 const signInFailure = function () {
   $('#message').text('Oops...Sign In').show()
 }
+
 const changePasswordSuccess = function () {
+  $('#change-pw').text('Password changed').show()
+  $('#change-pw').delay(2500).fadeOut(750)
   $('form').trigger('reset')
-  $('#message').text('Password changed').show()
 }
 
 const changePasswordFailure = function () {
-  $('#change-pw').text('oops...Try Again').show()
+  $('#change-pw').text('Oops...Try Password Again').show()
+  $('#change-pw').delay(2500).fadeOut(750)
+  $('form').trigger('reset')
 }
+
 const signOutSuccess = function (response) {
   store.user = response
   $('#message').text('Signed Out Successfully').show()
