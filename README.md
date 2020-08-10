@@ -45,5 +45,6 @@ After all these are completed, I then set up my file structure along with any de
 
 ### Unsolved Problems
 
-- Still need to clean up the styling.
-- Would like to add a rating sytem along with personal notes per album. Eventually would like to add photo of the album cover and add google scan to the app for easy web search of that particular album.
+- Still need to clean up the styling, set margins and work on each album card along with RPM of each album. Put log out features in a nav bar. Need to add a few more user input fields with more info per album and make the Genre field have a dropdown selector with a form field. Add a sort field for album catolog. 
+- Would like to add a rating sytem along with personal notes per album. Eventually would like to add photo of the album cover.
+- Some strech goals are to add google scan to the app for easy web search of that particular album.
