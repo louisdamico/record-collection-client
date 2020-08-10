@@ -1,8 +1,8 @@
 'use strict'
-// https://git.heroku.com/intense-scrubland-71825.git
+
 let apiUrl
 const apiUrls = {
-  production: 'https://git.heroku.com/intense-scrubland-71825.git',
+  production: 'https://intense-scrubland-71825.herokuapp.com/',
   development: 'http://localhost:4741'
 }
 
