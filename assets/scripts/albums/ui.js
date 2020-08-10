@@ -20,8 +20,8 @@ const addNewAlbumFailure = (data) => {
   $('form').trigger('reset')
 }
 const updateAlbumSuccess = () => {
-  $('#updateAlbum-message').text('Album Updated')
-  $('#updateAlbum-message').delay(2500).slideUp(750)
+  $('#catolog-message').text('Album UPDATED').show()
+  $('#catolog-message').delay(4000).slideUp(750)
   api.getLibrary()
     .then(getLibrarySuccess)
     .catch(function () {
@@ -29,7 +29,7 @@ const updateAlbumSuccess = () => {
     })
 }
 const updateAlbumFailure = () => {
-  $('#updateAlbum-message').text('Oops...Update Again')
+  $('#catolog-message').text('Oops...Update Again')
 }
 const getLibrarySuccess = (data) => {
   const showAlbumHtml = showAlbumTemplate({ albums: data.album })
@@ -39,10 +39,11 @@ const getLibrarySuccess = (data) => {
   $('.content').append(showAlbumHtml)
 }
 const getLibraryfailure = () => {
-  $('.catolog-message').text('Opps...Try Again')
+  $('#catolog-message').text('Opps...Try Again')
 }
 const deleteAlbumSuccess = (event) => {
-  $('.catolog-message').text('Album DELETED')
+  $('#catolog-message').text('Album DELETED').show()
+  $('#catolog-message').delay(4000).slideUp(750)
   api.getLibrary()
     .then(getLibrarySuccess)
     .catch(function () {
