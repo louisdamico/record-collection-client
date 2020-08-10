@@ -88,7 +88,7 @@ input[type=month]{
 #getAlbumsButton {
   margin-top: 1%;
   margin-bottom: 3%;
-  margin-left: 7px
+  margin-left: 8px
 }
 
 #change-pw {
@@ -96,6 +96,9 @@ input[type=month]{
   font-family: 'Monoton', cursive;
 }
 
+.titleHeading {
+  font-size: 35px;
+}
 .change-pw {
   margin-top: 3%;
 }
@@ -107,6 +110,10 @@ input[type=month]{
 
 .card-columns {
   margin-top: 3%;
+}
+
+.infoCard {
+  margin-bottom: 5px;
 }
 .overlay {
 margin-top: -3%;
