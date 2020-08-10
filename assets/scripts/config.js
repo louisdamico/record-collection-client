@@ -2,7 +2,7 @@
 // https://git.heroku.com/intense-scrubland-71825.git
 let apiUrl
 const apiUrls = {
-  production: '<replace-with-heroku-url>',
+  production: 'https://git.heroku.com/intense-scrubland-71825.git',
   development: 'http://localhost:4741'
 }
 
