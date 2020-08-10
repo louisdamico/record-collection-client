@@ -20,6 +20,8 @@ const addNewAlbumFailure = (data) => {
   $('form').trigger('reset')
 }
 const updateAlbumSuccess = () => {
+  $('#updateAlbum-message').text('Album Updated')
+  $('#updateAlbum-message').delay(2500).slideUp(750)
   api.getLibrary()
     .then(getLibrarySuccess)
     .catch(function () {
