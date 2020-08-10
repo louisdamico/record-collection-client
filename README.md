@@ -7,8 +7,8 @@ This application allows a user to keep track of their record collection in a dig
 ## Important Links
 
 - [Deployed Client](https://loudam88.github.io/record-collection-client/)
-- [Deployed API](https://git.heroku.com/intense-scrubland-71825.git)
-- [Other Repo](https://github.com/loudam88/record-collection-client)
+- [API Repo](https://github.com/loudam88/record-collection-api)
+
 
 ## Planning Story
 
@@ -21,8 +21,12 @@ After all these are completed, I then set up my file structure along with any de
 #### Wireframe:
 <a href="https://imgur.com/frMoDp6"><img src="https://i.imgur.com/frMoDp6.png" title="source: imgur.com" /></a>
 ---
-#### Record Collection:
+#### Login:
 <a href="https://imgur.com/rOXXyBW"><img src="https://i.imgur.com/rOXXyBW.png" title="source: imgur.com" /></a>
+#### Mobile View:
+<a href="https://imgur.com/8ufqk0J"><img src="https://i.imgur.com/8ufqk0J.png" title="source: imgur.com" /></a>
+#### Desktop View:
+<a href="https://imgur.com/VklXOAV"><img src="https://i.imgur.com/VklXOAV.png" title="source: imgur.com" /></a>
 
 ### User Stories
 

@@ -1,30 +1,21 @@
 
 {{#each albums as |album|}}
-    <br>
-      <section data-id="{{album._id}}">
-        <!-- Card Wider -->
-
-        <div class="card-columns">
-
-          <!-- Card image -->
-          <div class="view overlay">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
-            <a href="#!">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-            <button type="submit" class="btn btn-outline-danger delete-album">Delete Album</button>
-          </div>
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <!-- <h4 class="card-title"><strong>Title:</strong></h4> -->
-            <h4 class="card-title"><strong></strong></h4>
-
+  <br>
+    <section data-id="{{album._id}}">
+      <div class="card-columns">
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+          <button type="submit" class="btn btn-outline-danger delete-album">Delete Album</button>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title"><strong></strong></h4>
             <h2 class="titleHeading">
               {{limit album.title 15}}
             </h2 class="titleHeading">
-            <!-- Style -->
-            <h5 class="blue-text infoCard"><strong>Artist:</strong></h5>
+          <h5 class="blue-text infoCard"><strong>Artist:</strong></h5>
             <p>
               {{#if album.style}}
               {{album.style}}
@@ -32,8 +23,7 @@
               No Style provided
               {{/if}}
             </p>
-            <!-- Genre -->
-            <h5 class="blue-text infoCard"><strong>Genre:</strong></h5>
+          <h5 class="blue-text infoCard"><strong>Genre:</strong></h5>
             <p>
               {{#if album.genre}}
               {{album.genre}}
@@ -41,8 +31,7 @@
               No Genre provided
               {{/if}}
             </p>
-            <!-- firstRelease -->
-            <h5 class="blue-text infoCard"><strong>First Release:</strong></h5>
+          <h5 class="blue-text infoCard"><strong>First Release:</strong></h5>
             <p>
               {{#if album.firstRelease}}
               {{album.firstRelease}}
@@ -50,8 +39,8 @@
               No First Release provided
               {{/if}}
             </p><br>
-            {{> partial}}
-          </div>
+          {{> partial}}
         </div>
-      </section>
+      </div>
+    </section>
 {{/each}}
