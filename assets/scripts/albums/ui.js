@@ -42,7 +42,7 @@ const getLibraryfailure = () => {
   $('.catolog-message').text('Opps...Try Again')
 }
 const deleteAlbumSuccess = (event) => {
-  $('#deleteAlbum-message').text('Album DELETED')
+  $('.catolog-message').text('Album DELETED')
   api.getLibrary()
     .then(getLibrarySuccess)
     .catch(function () {
