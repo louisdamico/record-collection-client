@@ -23,6 +23,15 @@
             <h2>
               {{limit album.title 15}}
             </h2>
+            <!-- Style -->
+            <h5 class="blue-text pb-2"><strong>Artist:</strong></h5>
+            <p>
+              {{#if album.style}}
+              {{album.style}}
+              {{else}}
+              No Style provided
+              {{/if}}
+            </p>
             <!-- Genre -->
             <h5 class="blue-text pb-2"><strong>Genre:</strong></h5>
             <p>
@@ -30,15 +39,6 @@
               {{album.genre}}
               {{else}}
               No Genre provided
-              {{/if}}
-            </p>
-            <!-- Style -->
-            <h5 class="blue-text pb-2"><strong>Style:</strong></h5>
-            <p>
-              {{#if album.style}}
-              {{album.style}}
-              {{else}}
-              No Style provided
               {{/if}}
             </p>
             <!-- firstRelease -->
