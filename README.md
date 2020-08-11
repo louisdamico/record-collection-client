@@ -8,6 +8,7 @@ This application allows a user to keep track of their record collection in a dig
 
 - [Deployed Client](https://loudam88.github.io/record-collection-client/)
 - [API Repo](https://github.com/loudam88/record-collection-api)
+- [API Deployed](https://intense-scrubland-71825.herokuapp.com/)
 
 
 ## Planning Story
