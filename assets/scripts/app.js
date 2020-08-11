@@ -9,6 +9,7 @@ $(() => {
   $('.change-password').on('submit', authEvents.onChangePassword)
   $('.sign-out').on('submit', authEvents.onSignOut)
   $('.add-album').on('submit', albumEvents.onAddNewAlbum)
+  $('.add-new-album').on('click', albumEvents.onAddAlbumModal)
   $('#getAlbumsButton').on('click', albumEvents.onGetLibrary)
   $('#content').on('submit', '.partial-update-album', albumEvents.onUpdateAlbum)
   $('#content').on('click', '.delete-album', albumEvents.onDeleteAlbum)

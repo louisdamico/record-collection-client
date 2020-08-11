@@ -57,12 +57,28 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="add-album">
-            <p id="addAlbum-message"></p>
-              <form>
+    <!-- <div class="container"> -->
+<button type="button" class="btn btn-outline-success add-new-album" data-toggle="modal" data-target="#fullHeightModalRight">Add Album</button>
+
+<!-- <button type="button" class="btn btn-outline-success add-new-album" data-dismiss="modal">Add Album</button> -->
+
+<div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+      <!-- <div class="row"> -->
+<div class="modal-dialog modal-full-height modal-right" role="document">
+
+        <!-- <div class="col-lg-12"> -->
+
+            <!-- <div class="add-album"> -->
+
+<div class="modal-content">
+<div class="modal-header">
+
+
+              <form class="add-album">
+<h4 class="modal-title w-100" id="myModalLabel">New Album</h4><br>
+                <p id="addAlbum-message"></p>
                 <input name="album[title]" placeholder="Title" type="text">
                 <input name="album[style]" placeholder="Artist" type="text">
                 <!-- <input name="album[genre]" placeholder="Genre" type="text"> -->
@@ -85,7 +101,9 @@
                     <option value="Funk">Funk</option>
                   </select>
                 <input class="date-drop-down"name="album[firstRelease]" placeholder="First Release" type="month" min="1877-01" max="2021-01"><br>
-                <button class="btn btn-outline-success add-new-album" type="submit">Add Album</button>
+                <!-- <button class="btn btn-outline-success add-new-album" type="submit">Add Album</button> -->
+<button type="button" class="btn btn-outline-success add-new-album-close" data-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-outline-warning add-album-modal">Add Album</button>
                 <br>
               </form>
             </div>

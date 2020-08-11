@@ -65,7 +65,27 @@ input[type=month]{
   background-color: $input;
 }
 
-.add-new-album {
+.modal-content {
+  border-radius: 20px;
+  background-color: $background2;
+}
+
+.modal-header {
+  padding: 17px;
+  margin-top: 1px;
+}
+
+#myModalLabel {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Monoton', cursive;
+}
+
+.add-new-album-close {
+  margin-top: 4%;
+}
+
+.add-new-album, .add-album-modal {
   margin-top: 4%;
 }
 
@@ -86,18 +106,22 @@ input[type=month]{
   width: 175px;
   height: 30px;
 }
+
 .delete-album {
   float: left;
   padding: 0px;
 }
+
 #addAlbum-message{
   font-size: 25px;
   font-family: 'Monoton', cursive;
 }
+
 #catolog-message {
   font-size: 25px;
   font-family: 'Monoton', cursive;
 }
+
 #getAlbumsButton {
   margin-top: 1%;
   margin-bottom: 3%;

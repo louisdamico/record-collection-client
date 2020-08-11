@@ -14,6 +14,11 @@ const onAddNewAlbum = function (event) {
     .catch(ui.addNewAlbumFailure)
 }
 
+const onAddAlbumModal = function (event) {
+  event.preventDefault()
+  $('#fullHeightModalRight').on('click')
+}
+
 const onGetLibrary = (event) => {
   event.preventDefault()
   api.getLibrary()
@@ -40,6 +45,7 @@ const onDeleteAlbum = function (event) {
 }
 module.exports = {
   onAddNewAlbum,
+  onAddAlbumModal,
   onGetLibrary,
   onUpdateAlbum,
   onDeleteAlbum

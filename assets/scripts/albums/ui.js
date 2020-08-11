@@ -6,6 +6,7 @@ const showAlbumTemplate = require('../templates/album-listing.handlebars')
 
 // hide till get ablums
 $('#album-catolog').hide()
+$('.add-new-album').hide()
 
 const addNewAlbumSuccess = (data) => {
   $('form').trigger('reset')

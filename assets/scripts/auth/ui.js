@@ -20,10 +20,12 @@ const signInSuccess = function (response) {
   $('form').trigger('reset')
   $('#message').text('Loged In').show()
   $('#message').delay(2500).slideUp(750)
+  $('.add-new-album').show()
   $('.login-signup').hide()
   $('.collection').show()
   $('.pw-signout').show()
   $('.add-album').show()
+
 }
 
 const signInFailure = function () {
