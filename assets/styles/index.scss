@@ -73,6 +73,19 @@ input[type=month]{
   margin-top: 4%;
   margin-bottom: 4%
 }
+
+.drop-down-genre {
+  text-align: center;
+  border-radius: 7px;
+  background-color: $input;
+  width: 173px;
+  height: 28px;
+}
+
+.date-drop-down {
+  width: 175px;
+  height: 30px;
+}
 .delete-album {
   float: left;
   padding: 0px;

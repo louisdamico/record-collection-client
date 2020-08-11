@@ -38,7 +38,7 @@
         </div>
       </div>
     </header>
-                    <!-- dissapear after sign in -->
+  <!-- dissapear after sign in -->
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -49,7 +49,7 @@
                 <input name="passwords[new]" placeholder="new password" type="password"><br>
                 <button class="btn btn-outline-secondary change-pw" type="submit">Change Password</button><br>
               </form>
-                          <!-- appear only after sign in -->
+            <!-- appear only after sign in -->
               <form class="sign-out">
               <button class="btn btn-outline-danger sign-out"type="submit">Sign Out</button>
             </form>
@@ -65,8 +65,26 @@
               <form>
                 <input name="album[title]" placeholder="Title" type="text">
                 <input name="album[style]" placeholder="Artist" type="text">
-                <input name="album[genre]" placeholder="Genre" type="text">
-                <input name="album[firstRelease]" placeholder="First Release" type="month" min="1877-01" max="2021-01"value="2020-08"><br>
+                <!-- <input name="album[genre]" placeholder="Genre" type="text"> -->
+                  <select name="album[genre]" class="drop-down-genre">
+                    <option value="disabled selected hidden">Select Genre</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Folk">Folk</option>
+                    <option value="Blues">Blues</option>
+                    <option value="Country">Country</option>
+                    <option value="Heavy Metal">Heavy Metal</option>
+                    <option value="Classical">Classical</option>
+                    <option value="R & B">R & B</option>
+                    <option value="Punk">Punk</option>
+                    <option value="Soul">Soul</option>
+                    <option value="Reggae">Reggae</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Funk">Funk</option>
+                  </select>
+                <input class="date-drop-down"name="album[firstRelease]" placeholder="First Release" type="month" min="1877-01" max="2021-01"><br>
                 <button class="btn btn-outline-success add-new-album" type="submit">Add Album</button>
                 <br>
               </form>
